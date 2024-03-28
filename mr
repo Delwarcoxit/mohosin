@@ -1,0 +1,9 @@
+import requests
+
+phn = input("Enter your phone: ")
+amount = int(input("Enter your amount: "))
+api = f"https://delwarit.vercel.app/api?phone={phn}"
+
+for _ in range(amount):
+    response = requests.get(api)
+    print(response.text)
